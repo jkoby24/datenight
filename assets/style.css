@@ -1,0 +1,4 @@
+/* test to make sure style.css linked to html */
+p {
+    color: blue;
+} 

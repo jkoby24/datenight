@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
     <head>
 
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <!-- added shrink-to-fit=no, not sure if thats bootstrap or not -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bulma CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
         <!-- Font Awesome CDN -->
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- CSS Sheet -->
         <link rel="stylesheet" href="assets/style.css">
 
@@ -16,94 +20,99 @@
 
     </head>
 
-    <body>
+<body>
 
-        <div class="container">
+    <main class="container">
 
-            <!--The HMTL here is simply getting the bare bones elements onto the page. Phase 1-->
-
-            <!-- Jumbotron -->
-            <div class="jumbotron">
-                <h1>Date Night</h1>
-                <p>This is some filler text about our application weeeee</p>
+        <section class="hero is-danger">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Primary title
+                    </h1>
+                    <h2 class="subtitle">
+                        Primary subtitle
+                    </h2>
+                </div>
             </div>
-        
-             <!-- Input forms -->
-            <div class="columns">
-                <div class="column">
-                    <div class ="card">
-                        <div class=“control”>
-                            <div class=“select”>
-                              <select>
+        </section>
+
+        <!-- Input forms -->
+        <!-- TILES ARE WORKING -->
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-5 is-child notification is-danger">
+                    <div class=“control”>
+                        <div class=“select”>
+                            <select>
                                 <option>Select dropdown</option>
                                 <option>With options</option>
-                              </select>
-                            </div>
-                          </div>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class ="card">
-                        <div class=“field”>
-                            <label class=“label”>Subject</label>
-                            <div class=“control”>
-                              <div class=“select”>
-                                <select>
-                                  <option>Select dropdown</option>
-                                  <option>With options</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
+                <div class="tile is-5 is-child notification is-danger">
+                    <div class=“control”>
+                        <div class=“select”>
+                            <select>
+                                <option>Select dropdown</option>
+                                <option>With options</option>
+                            </select>
+                        </div>
                     </div>
+                </div>   
+            </div>
+
+        </div> <!-- Tile ancestor close -->
+
+        <!-- Submit or randomize buttons -->
+        <div class="columns">
+            <div class="column is-half">
+                <button type="button" class="btn btn-primary">Search for Movie</button>
+            </div>
+            <div class="column is-half">
+                <button type="button" class="btn btn-primary">Search for Recipe</button>
+            </div>
+        </div>
+
+        <!-- Results cards -->
+        <div class="columns">
+            <div class="column is-half">
+                <div class="card">
+                    <p>Movie result printed here</p>
                 </div>
             </div>
 
-            <!-- Submit or randomize buttons -->
-            <div class="row">
-                <div class="col-md-4">
-                    <button type="button" class="btn btn-primary">Search for Movie</button>
-                </div>
-                <div class="col-md-4">
-                    <button type="button" class="btn btn-primary">Search for Recipe</button>
+            <div class="column is-half">
+                <div class="card">
+                    <p>Recipe result printed here</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Results cards -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class ="card">
-                        <p>Movie result printed here</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class ="card">
-                        <p>Recipe result printed here</p>
-                    </div>
-                </div>
-            </div>
+    </main> <!-- Container div close -->
 
-            <!-- Footer -->
-            <div class="card text-center">
-                <div class="card-body">
-                  <h5 class="card-title">Date Night Application Supergroup Studios Inc.</h5>
-                  <p class="card-text">If we want card text on footer it would go here</p>
-                </div>
-                <div class="card-footer text-muted">
-                    "I'll have what she's having"
-                </div>
-              </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="content has-text-centered">
+            <!-- changed to h3 class -->
+            <h3 class="card-title">Date Night Application Supergroup Studios Inc.</h3>
+            <p class="card-text">If we want card text on footer it would go here</p>
+        </div>
+        <div class="content has-text-centered text-muted">
+            "I'll have what she's having"
+        </div>
+    </div>
 
 
-        </div>  <!-- Container div close -->
-        
+
+
     <!-- Jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Javascript Sheet -->
     <script type="text/javascript" src="assets/script.js"></script>
 
-    </body>
+</body>
 
-    </html>
+</html>

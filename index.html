@@ -2,23 +2,123 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+    <!-- added shrink-to-fit=no, not sure if thats bootstrap or not -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- linked bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- linked to style.css -->
+    <!-- Bulma CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS Sheet -->
     <link rel="stylesheet" href="assets/style.css">
-    <!-- changed title to "Date Night" -->
+
     <title>Date Night</title>
+
 </head>
 
 <body>
-    <!-- test paragraph to make sure html working properly -->
-    <p>hello</p>
+
+    <div class="container">
+
+        <!--The HMTL here is simply getting the bare bones elements onto the page. Phase 1-->
+
+        <!-- Jumbotron -->
+        <!-- <div class="jumbotron">
+            <h1>Date Night</h1>
+            <p>This is some filler text about our application weeeee</p>
+        </div> -->
+        <section class="hero is-danger">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Primary title
+                    </h1>
+                    <h2 class="subtitle">
+                        Primary subtitle
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Input forms -->
+
+        <!-- replaced "row" with "columns" -->
+        <div class="columns">
+            <!-- replaced "col-med-4" with "column is-half" -->
+            <div class="column is-half">
+                <div class="card">
+                    <div class=“control”>
+                        <div class=“select”>
+                            <select>
+                                <option>Select dropdown</option>
+                                <option>With options</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="card">
+                    <div class=“field”>
+                        <label class=“label”>Subject</label>
+                        <div class=“control”>
+                            <div class=“select”>
+                                <select>
+                                    <option>Select dropdown</option>
+                                    <option>With options</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit or randomize buttons -->
+        <div class="columns">
+            <div class="column is-half">
+                <button type="button" class="btn btn-primary">Search for Movie</button>
+            </div>
+            <div class="column is-half">
+                <button type="button" class="btn btn-primary">Search for Recipe</button>
+            </div>
+        </div>
+
+        <!-- Results cards -->
+        <div class="columns">
+            <div class="column is-half">
+                <div class="card">
+                    <p>Movie result printed here</p>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="card">
+                    <p>Recipe result printed here</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="content has-text-centered">
+                <!-- changed to h3 class -->
+                <h3 class="card-title">Date Night Application Supergroup Studios Inc.</h3>
+                <p class="card-text">If we want card text on footer it would go here</p>
+            </div>
+            <div class="content has-text-centered text-muted">
+                "I'll have what she's having"
+            </div>
+        </div>
 
 
-    <!-- linked to script.js -->
+    </div> <!-- Container div close -->
+
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Javascript Sheet -->
     <script type="text/javascript" src="assets/script.js"></script>
 
 </body>

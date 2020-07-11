@@ -6,18 +6,21 @@ function getRandomMovie() {
     minPage = Math.ceil(minPage);
     maxPage = Math.floor(maxPage);
     let randomPage = Math.floor(Math.random() * (maxPage - minPage + 1)) + minPage;
+
     // Get a random page for the response
     let minResult = 1;
     let maxResult = 5;
     minResult = Math.ceil(minResult);
     maxResult = Math.floor(maxResult);
+
     let randomResult = Math.floor(Math.random() * (maxResult - minResult + 1)) + minResult;
     // Filter function for user inputs
     
     // Ajax call for movie API
     $("#find-movie").on("click", function(event) {
         event.preventDefault();
-        // var movieGenre = $("#movie-input").val();
+        $("#movie-result").empty();
+
         var apiKey = "&api_key=256449bbf2521fc4f3d50cafe73d76f7";
         var queryURL = "https://api.themoviedb.org/3/movie/top_rated?" + apiKey + "&language=en-US&page=" + randomPage;
         $.ajax({
@@ -26,6 +29,7 @@ function getRandomMovie() {
         }).then(function(response) {
             // Log the information to the console
             console.log(response)
+
             // Show the random movie result on the page
             var movie = response.results[randomResult];
             var movieResult = $("<h2>").text(movie.original_title);
@@ -36,31 +40,123 @@ function getRandomMovie() {
     });
 }
 // Run the random movie function when the find-movie button is clicked
-var randomMovieBtn = $("#find-movie").on("click", getRandomMovie())
-// Create a function that gets a random recipe from the spoonacular API
-function getRandomRecipe() {
-    // Ajax call for recipe API
-    $("#find-recipe").on("click", function(event) {
+$("#find-movie").on("click", getRandomMovie());
+
+// Genres are originally set to id integers - Create a function to change each id integer to its associated string
+function movieIdToGenre () {
+
+        var apiKey = "&api_key=256449bbf2521fc4f3d50cafe73d76f7";
+        var queryURL = "https://api.themoviedb.org/3/genre/movie/list?" + apiKey + "&language=en-US";
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response)
+            // Defining the variables to find the list of genres
+            var genreArr = response.genres;
+            console.log(genreArr);
+
+            // Add each genre to the dropdown list
+            for (var i = 0; i < genreArr.length; i++) {
+                
+
+                // No documentaries found in the database - Removing this option from the dropdown
+                if (genreArr[i].id != 99) {
+                    var dropdownItem = $("<option>");
+                    dropdownItem.attr("value", genreArr[i].id);
+                    dropdownItem.text(genreArr[i].name);
+                    $(".genre-select").append(dropdownItem)
+
+                    console.log(dropdownItem);
+                }
+
+            }
+
+        });
+}
+
+movieIdToGenre();
+
+
+// Get a random movie based on the user selected genre
+function getMovieByGenre () {
+        // Copied from random movie function
+        let lowPage = 1;
+        let highPage = 500;
+        lowPage = Math.ceil(lowPage);
+        highPage = Math.floor(highPage);
+
+        let randomPageChoice = Math.floor(Math.random() * (highPage - lowPage + 1)) + lowPage;
+        
+    // Ajax call for movie API
         event.preventDefault();
-        // var recipe = $("#recipe-input").val();
-        var apiKey = "&apiKey=5f8dbab87b794a1cbed5569a8c90a979"; 
-        var queryURL = "https://api.spoonacular.com/recipes/random?" + apiKey;
-    
+        $("#genre-choice").empty();
+
+        var apiKey = "&api_key=256449bbf2521fc4f3d50cafe73d76f7";
+        var queryURL = "https://api.themoviedb.org/3/movie/top_rated?" + apiKey + "&language=en-US&page=" + randomPageChoice;
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function(response) {
             // Log the information to the console
             console.log(response)
+
+            // Show the random movie result by genre on the page
+            var movieArr = response.results;
+            console.log($("#inputGroupSelect01").val());
+            
+            var filterArr = movieArr.filter((movie) => movie.genre_ids.includes(parseInt($("#inputGroupSelect01").val())));
+            console.log(filterArr);
+
+            if (filterArr.length === 0) {
+                getMovieByGenre();
+            }
+            else {
+                var movieTitle = filterArr[0].original_title;
+                var movieImg = $("<img>").attr("src", "http://image.tmdb.org/t/p/w185/" + filterArr[0].poster_path);
+                $("#genre-choice").append(movieTitle);
+                $("#genre-choice").append(movieImg);
+            }
+
+
+        });
+
+}
+
+// Run the movie by genre function
+$("#movie-genre").on("click", getMovieByGenre);
+
+
+
+// Create a function that gets a random recipe from the spoonacular API
+function getRandomRecipe() {
+    // Ajax call for recipe API
+    $("#find-recipe").on("click", function(event) {
+        event.preventDefault();
+        $("#recipe-result").empty();
+       
+
+        var apiKey = "&apiKey=36c98c9c42a94c718bb0011d58688bea"; 
+        var queryURL = "https://api.spoonacular.com/recipes/random?" + apiKey;
+    
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+
+            // Log the information to the console
+            console.log(response)
+
             // Show the recipe on the page
             var recipeResult = $("<h2>").text(response.recipes[0].title);
             var recipeImg = $("<img>").attr("src", response.recipes[0].image);
-            // var recipeLink = $("<a>").attr("href", response.recipes[0].sourceUrl  + "Get the recipe!");
+            var recipeLink = response.recipes[0].sourceUrl;
             $("#recipe-result").append(recipeResult);
             $("#recipe-result").append(recipeImg);
-            // $("#recipe-result").append(recipeLink);
+            $("#recipe-result").append($("<a>").text("Click this link to get recipe information").attr("href", recipeLink));
         })
     });
 }
+
 // Run the random movie function when the find-movie button is clicked
-var randomRecipeBtn = $("#find-recipe").on("click", getRandomRecipe())
+$("#find-recipe").on("click", getRandomRecipe());

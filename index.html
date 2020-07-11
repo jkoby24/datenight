@@ -1,26 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- linked bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- linked to style.css -->
-    <link rel="stylesheet" href="assets/style.css">
-    <!-- changed title to "Date Night" -->
-    <title>Date Night</title>
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- CSS Sheet -->
+        <link rel="stylesheet" href="assets/style.css">
+        
+        <title>Date Night</title>
 
-<body>
-    <!-- test paragraph to make sure html working properly -->
-    <p>hello</p>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <!--The HMTL here is simply getting the bare bones elements onto the page. Phase 1-->
+
+        <div class="container">
+            <div class="row">
+                <button id="find-movie">Random Movie</button>
+            </div>
+            <br>
+            <div class="row" id="movie-result">
+                <h3>Movie Result</h3>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="custom-select genre-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+            </select>
+            <button id="movie-genre">Find a Movie</button>
+          </div>
+          <br>
+          <div class="row" id="genre-choice">
+            <h3>Genre Result</h3>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="find-recipe">Find Recipe</button>
+                </div>
+                <br>
+                <br>
+                <div class="row" id="recipe-result">
+                    <div class="col-md-12">
+                        <h3>Recipe Result</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+     <!-- jQuery JS -->
+     <script src="https://code.jquery.com/jquery.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Javascript Sheet and Link to JQuery-->
+    <script type="text/javascript" src="./assets/script.js"></script>
 
 
-    <!-- linked to script.js -->
-    <script type="text/javascript" src="assets/script.js"></script>
+ 
 
-</body>
+    </body>
 
-</html>
+    </html>

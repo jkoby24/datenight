@@ -22,18 +22,19 @@
 <body>
     <main class="container">
 
-        <section class="hero has-background-danger-dark has-text-white">
+        <header class="hero has-background-danger-dark has-text-white">
             <div class="hero-body">
-                <div class="container">
-                    <h1 class="title has-text-white">
-                        Primary title
-                    </h1>
-                    <h2 class="subtitle has-text-white">
-                        Primary subtitle
+                <div class="container has-text-centered">
+                    <figure class="media-left">
+                        <p class="image is-3by1">
+                            <img src="assets/datenight.jpeg">
+                        </p>
+                    </figure>
+                    <h2 class="subtitle has-text-white">Stuck at home? Find a new movie and try a new recipe tonight!
                     </h2>
                 </div>
             </div>
-        </section>
+        </header>
 
         <br>
         <br>
@@ -57,7 +58,7 @@
                       
                     </div>
                     <button class="button has-background-danger-dark has-text-white is-normal">Find a movie</button>
-                    <button class="button has-background-danger-dark has-text-white is-normal">Randomize</button>
+                    <button class="button has-background-info has-text-white is-normal">Randomize</button>
                 </div>
             </div>
 
@@ -75,28 +76,42 @@
                         </div>
                     </div>
                     <button class="button has-background-danger-dark has-text-white is-normal">Find a recipe</button>
-                    <button class="button has-background-danger-dark has-text-white is-normal">Randomize</button>
+                    <button class="button has-background-info has-text-white is-normal">Randomize</button>
                 </div>
             </div>
 
         </div>
+        
 
         <!-- Results cards -->
         <div class="columns has-text-centered">
             <div class="column is-4 is-offset-1">
                 <div class="card">
-                    <p>Movie result printed here</p>
+                    <div class="py-6">
+                    <span style="font-size: 6em; color:rgb(50,152,220);">
+                        <i class="fas fa-ticket-alt"></i>
+                    </span>
+                    </div>
                 </div>
             </div>
 
             <div class="column is-4 is-offset-2">
                 <div class="card">
-                    <p>Recipe result printed here</p>
+                    <div class="py-6">
+                    <span style="font-size: 6em; color:rgb(50,152,220);">
+                        <i class="fas fa-utensils"></i>
+                    </span>
+                    </div>
                 </div>
             </div>
         </div>
 
     </main>
+
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Footer -->
     <!-- switched from a div to footer so it's semantically correct -->
     <footer class="footer">

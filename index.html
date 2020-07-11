@@ -65,9 +65,13 @@
                         <label class=“label”>Subject</label>
                         <div class=“control”>
                             <div class=“select”>
-                                <select>
-                                    <option>Select dropdown</option>
-                                    <option>With options</option>
+                                <select name="cuisines" id="cuisines">
+                                    <option value="chinese">chinese</option>
+                                    <option value="mexican">mexican</option>
+                                    <option value="italian">italian</option>
+                                    <option value="japanese">japanese</option>
+                                    <option value="indian">indian</option>
+                                    <option value="random">random</option>
                                 </select>
                             </div>
                         </div>
@@ -82,7 +86,7 @@
                 <button type="button" class="btn btn-primary">Search for Movie</button>
             </div>
             <div class="column is-half">
-                <button type="button" class="btn btn-primary">Search for Recipe</button>
+                <button type="button" class="btn btn-primary" id="search-btn">Search for Recipe</button>
             </div>
         </div>
 
@@ -94,8 +98,8 @@
                 </div>
             </div>
 
-            <div class="column is-half">
-                <div class="card">
+            <div class="column is-half" id="recipe-container">
+                <div class="card" id="recipe-div">
                     <p>Recipe result printed here</p>
                 </div>
             </div>

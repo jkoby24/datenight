@@ -3,31 +3,26 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <!-- added shrink-to-fit=no, not sure if thats bootstrap or not -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bulma CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- CSS Sheet -->
-    <link rel="stylesheet" href="assets/style.css">
+    <head>
 
-    <title>Date Night</title>
+        <meta charset="UTF-8">
+        <!-- added shrink-to-fit=no, not sure if thats bootstrap or not -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bulma CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- CSS Sheet -->
+        <link rel="stylesheet" href="assets/style.css">
 
-</head>
+        <title>Date Night</title>
+
+    </head>
 
 <body>
-
     <main class="container">
 
-        <!--The HMTL here is simply getting the bare bones elements onto the page. Phase 1-->
-
-        <!-- Jumbotron -->
-        <!-- <div class="jumbotron">
-            <h1>Date Night</h1>
-            <p>This is some filler text about our application weeeee</p>
-        </div> -->
         <section class="hero is-danger">
             <div class="hero-body">
                 <div class="container">
@@ -41,39 +36,71 @@
             </div>
         </section>
 
+        <br>
+        <br>
         <!-- Input forms -->
 
-        <!-- replaced "row" with "columns" -->
-        <div class="tile is-ancestor">
-            <!-- replaced "col-med-4" with "column is-half" -->
-            <!-- is-warning not working -->
-            <div class="tile is-parent is-wide is-warning">
-                <div class=“control”>
-                    <div class=“select”>
-                        <select>
-                            <option>Select dropdown</option>
-                            <option>With options</option>
-                        </select>
+
+        <div class="columns">
+
+            <div class="column is-4 is-offset-1">
+                <h3>Find a movie!</h3>
+                <div class="box">
+                    <div class=“control”>
+                        <div class=“select”>
+                            <select>
+                                <option>Select dropdown</option>
+                                <option>With options</option>
+                            </select>
+                        </div>
+                      
                     </div>
                 </div>
             </div>
 
-            <div class="column is-half">
-                <div class="card">
-                    <div class=“field”>
-                        <label class=“label”>Subject</label>
-                        <div class=“control”>
-                            <div class=“select”>
-                                <select>
-                                    <option>Select dropdown</option>
-                                    <option>With options</option>
-                                </select>
-                            </div>
+            <div class="column is-4 is-offset-2">
+                <h3>Find a recipe!</h3>
+                <div class="box">
+                    <div class=“control”>
+                        <div class=“select”>
+                            <select>
+                                <option>Select dropdown</option>
+                                <option>With options</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
+        <!-- TILES ARE WORKING -->
+        <!-- <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <div class="tile is-5 is-offset-1 is-child notification is-danger">
+                    <div class=“control”>
+                        <div class=“select”>
+                            <select>
+                                <option>Select dropdown</option>
+                                <option>With options</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tile is-5 is-offset-1 is-child notification is-danger">
+                    <div class=“control”>
+                        <div class=“select”>
+                            <select>
+                                <option>Select dropdown</option>
+                                <option>With options</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>   
+            </div> -->
+
+        <!-- </div> Tile ancestor close -->
 
         <!-- Submit or randomize buttons -->
         <div class="columns">
@@ -99,6 +126,7 @@
                 </div>
             </div>
         </div>
+
     </main>
     <!-- Footer -->
     <!-- switched from a div to footer so it's semantically correct -->
@@ -111,7 +139,9 @@
         <div class="content has-text-centered text-muted">
             "I'll have what she's having"
         </div>
+
     </footer>
+
 
 
 

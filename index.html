@@ -10,9 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bulma CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
-        <!-- Font Awesome CDN -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Font Awesome script -->
+        <script src="https://kit.fontawesome.com/5d2e3c0b75.js" crossorigin="anonymous"></script>
         <!-- CSS Sheet -->
         <link rel="stylesheet" href="assets/style.css">
 
@@ -24,13 +23,13 @@
 
     <main class="container">
 
-        <section class="hero is-danger">
+        <section class="hero has-background-danger-dark has-text-white">
             <div class="hero-body">
                 <div class="container">
-                    <h1 class="title">
+                    <h1 class="title has-text-white">
                         Primary title
                     </h1>
-                    <h2 class="subtitle">
+                    <h2 class="subtitle has-text-white">
                         Primary subtitle
                     </h2>
                 </div>
@@ -42,52 +41,48 @@
         <!-- Input forms -->
 
 
-        <div class="columns">
+        <div class="columns has-text-centered">
 
             <div class="column is-4 is-offset-1">
-                <h3>What genre of movie do you want to watch?</h3>
+                <h3 class="is-size-5">Pick a movie genre!</h3>
                 <div class="box">
-                    <div class=“control”>
-                        <div class=“select”>
-                            <select>
-                                <option>Select dropdown</option>
-                                <option>With options</option>
-                            </select>
+                    <div class="field is-danger">
+                        <div class="control">
+                            <div class="select is-danger is-rounded">
+                                <select>
+                                    <option>Genre</option>
+                                    <option>With options</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary">Search for Movie</button>
+                    <button class="button has-background-danger-dark has-text-white is-normal">Find a movie</button>
+                    <button class="button has-background-danger-dark has-text-white is-normal">Randomize</button>
                 </div>
             </div>
 
             <div class="column is-4 is-offset-2">
-                <h3>What type of cuisine do you want to cook?</h3>
+                <h3 class="is-size-5">Pick a cuisine to cook!</h3>
                 <div class="box">
-                    <div class=“control”>
-                        <div class=“select”>
-                            <select>
-                                <option>Select dropdown</option>
-                                <option>With options</option>
-                            </select>
+                    <div class="field">
+                        <div class="control">
+                            <div class="select is-danger is-rounded">
+                                <select class="has-text-">
+                                    <option>Cuisine</option>
+                                    <option>With options</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary">Search for Recipe</button>
+                    <button class="button has-background-danger-dark has-text-white is-normal">Find a recipe</button>
+                    <button class="button has-background-danger-dark has-text-white is-normal">Randomize</button>
                 </div>
             </div>
 
-        </div>
-
-        <!-- Submit or randomize buttons -->
-        <div class="columns">
-            <div class="column is-4 is-offset-1">
-                <button type="button" class="btn btn-primary">Search for Movie</button>
-            </div>
-            <div class="column is-4 is-offset-2">
-                <button type="button" class="btn btn-primary">Search for Recipe</button>
-            </div>
         </div>
 
         <!-- Results cards -->
-        <div class="columns">
+        <div class="columns has-text-centered">
             <div class="column is-4 is-offset-1">
                 <div class="card">
                     <p>Movie result printed here</p>

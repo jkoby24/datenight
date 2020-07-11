@@ -79,7 +79,7 @@ movieIdToGenre();
 
 
 // Get a random movie based on the user selected genre
-function getMovieByGenre () {
+function getMovieByGenre (event) {
         // Copied from random movie function
         let lowPage = 1;
         let highPage = 500;
@@ -90,7 +90,7 @@ function getMovieByGenre () {
         
     // Ajax call for movie API
         event.preventDefault();
-        $("#genre-choice").empty();
+        $(".genre-choice").empty();
 
         var apiKey = "&api_key=256449bbf2521fc4f3d50cafe73d76f7";
         var queryURL = "https://api.themoviedb.org/3/movie/top_rated?" + apiKey + "&language=en-US&page=" + randomPageChoice;
@@ -103,9 +103,9 @@ function getMovieByGenre () {
 
             // Show the random movie result by genre on the page
             var movieArr = response.results;
-            console.log($("#inputGroupSelect01").val());
+            console.log($(".genre-select").val());
             
-            var filterArr = movieArr.filter((movie) => movie.genre_ids.includes(parseInt($("#inputGroupSelect01").val())));
+            var filterArr = movieArr.filter((movie) => movie.genre_ids.includes(parseInt($(".genre-select").val())));
             console.log(filterArr);
 
             if (filterArr.length === 0) {
@@ -114,8 +114,8 @@ function getMovieByGenre () {
             else {
                 var movieTitle = filterArr[0].original_title;
                 var movieImg = $("<img>").attr("src", "http://image.tmdb.org/t/p/w185/" + filterArr[0].poster_path);
-                $("#genre-choice").append(movieTitle);
-                $("#genre-choice").append(movieImg);
+                $(".genre-choice").append(movieTitle);
+                $(".genre-choice").append(movieImg);
             }
 
 

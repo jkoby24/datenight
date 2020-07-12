@@ -79,7 +79,7 @@ movieIdToGenre();
 
 
 // Get a random movie based on the user selected genre
-function getMovieByGenre (event) {
+function getMovieByGenre () {
         // Copied from random movie function
         let lowPage = 1;
         let highPage = 500;
@@ -89,7 +89,6 @@ function getMovieByGenre (event) {
         let randomPageChoice = Math.floor(Math.random() * (highPage - lowPage + 1)) + lowPage;
         
     // Ajax call for movie API
-        event.preventDefault();
         $(".genre-choice").empty();
 
         var apiKey = "&api_key=256449bbf2521fc4f3d50cafe73d76f7";
@@ -150,9 +149,11 @@ function getRandomRecipe() {
             // Show the recipe on the page
             var recipeResult = $("<h2>").text(response.recipes[0].title);
             var recipeImg = $("<img>").attr("src", response.recipes[0].image);
+            var prepTime = response.recipes[0].readyInMinutes;
             var recipeLink = response.recipes[0].sourceUrl;
             $("#recipe-result").append(recipeResult);
             $("#recipe-result").append(recipeImg);
+            $("#recipe-result").append("Preparation time: " + prepTime + " minutes");
             $("#recipe-result").append($("<a>").text("Click this link to get recipe information").attr("href", recipeLink));
         })
     });

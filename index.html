@@ -20,18 +20,18 @@
     </head>
 
 <body>
-    <main class="container">
 
-        <header class="hero has-background-danger-dark has-text-white">
+    <div class="bg-img">
+
+        <header class="hero has-background-black has-text-white">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <figure class="media-left">
                         <p class="image is-3by1">
-                            <img src="assets/datenight.jpeg">
+                            <img src="assets/datenight.jpeg" id="hero-img" alt="Date Night neon sign">
                         </p>
                     </figure>
-                    <h2 class="subtitle has-text-white">Stuck at home? Find a new movie and try a new recipe tonight!
-                    </h2>
+                    <h1 id="hero-text" class="subtitle has-text-white">Stuck at home? Find a new movie and try a new recipe tonight!</h1>
                 </div>
             </div>
         </header>
@@ -40,48 +40,50 @@
         <br>
         <!-- Input forms -->
 
+        <main class="container">
 
         <div class="columns has-text-centered">
 
             <div class="column is-4 is-offset-1">
-                <h3 class="is-size-5">Pick a movie genre!</h3>
+                <h2 class="is-size-2 has-text-weight-bold has-text-black">Pick a movie genre!</h2>
                 <div class="box">
                     <div class="field is-danger">
                         <div class="control">
                             <div class="select is-danger is-rounded">
-                                <select>
+                                <select class="genre-select">
                                     <option>Genre</option>
-                                    <option>With options</option>
                                 </select>
                             </div>
                         </div>
                       
                     </div>
-                    <button class="button has-background-danger-dark has-text-white is-normal">Find a movie</button>
-                    <button class="button has-background-info has-text-white is-normal">Randomize</button>
+                    <button id="movie-genre" class="button has-background-danger-dark has-text-white is-normal">Find a movie</button>
+                    <button id="find-movie" class="button has-background-link-dark has-text-white is-normal">Randomize</button>
                 </div>
             </div>
 
 
             <div class="column is-4 is-offset-2">
-                <h3 class="is-size-5">Pick a cuisine to cook!</h3>
+                <h2 class="is-size-2 has-text-weight-bold has-text-black">Pick a cuisine to cook!</h2>
                 <div class="box">
                     <div class="field">
                         <div class="control">
                             <div class="select is-danger is-rounded">
-                                <select name="cuisines" id="cuisines">
-                                    <option value="chinese">chinese</option>
-                                    <option value="mexican">mexican</option>
-                                    <option value="italian">italian</option>
-                                    <option value="japanese">japanese</option>
-                                    <option value="indian">indian</option>
-                                    <option value="random">random</option>
+
+                                <select name="cuisines" id="cuisines" class="has-text-">
+                                    <option>Cuisine</option>
+                                    <option value="chinese">Chinese</option>
+                                    <option value="mexican">Mexican</option>
+                                    <option value="italian">Italian</option>
+                                    <option value="japanese">Japanese</option>
+                                    <option value="indian">Indian</option>
+
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <button class="button has-background-danger-dark has-text-white is-normal">Find a recipe</button>
-                    <button class="button has-background-info has-text-white is-normal">Randomize</button>
+                    <button id="recipe-search-btn" class="button has-background-danger-dark has-text-white is-normal">Find a recipe</button>
+                    <button id="random-search-btn" class="button has-background-link-dark has-text-white is-normal">Randomize</button>
                 </div>
             </div>
 
@@ -92,9 +94,9 @@
         <!-- Results cards -->
         <div class="columns has-text-centered">
             <div class="column is-4 is-offset-1">
-                <div class="card">
-                    <div class="py-6">
-                    <span style="font-size: 6em; color:rgb(50,152,220);">
+                <div class="box">
+                    <div class="py-6 genre-choice" id="movie-result">
+                    <span style="font-size: 6em; color:rgb(33,96,196);">
                         <i class="fas fa-ticket-alt"></i>
                     </span>
                     </div>
@@ -103,9 +105,9 @@
 
 
             <div class="column is-4 is-offset-2">
-                <div class="card">
-                    <div class="py-6">
-                    <span style="font-size: 6em; color:rgb(50,152,220);">
+                <div class="box">
+                    <div class="py-6" id="recipe-result">
+                    <span style="font-size: 6em; color:rgb(33,96,196);">
                         <i class="fas fa-utensils"></i>
                     </span>
                     </div>
@@ -122,7 +124,7 @@
     <br>
     <!-- Footer -->
     <!-- switched from a div to footer so it's semantically correct -->
-    <footer class="footer">
+    <footer class="footer has-text-black has-background-black">
         <div class="content has-text-centered">
             <!-- changed to h3 class -->
             <h3 class="card-title">Date Night Application Supergroup Studios Inc.</h3>
@@ -131,6 +133,9 @@
         <div class="content has-text-centered text-muted">
             "I'll have what she's having"
         </div>
+        <a href="https://bulma.io">
+            <img src="/path/to/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+          </a>
 
     </footer>
 

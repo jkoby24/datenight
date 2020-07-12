@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     // creates a function to bring back results based on user selected criteria 
     function getRecipe(cuisine){

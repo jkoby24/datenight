@@ -1,4 +1,24 @@
-header, img {
-    box-shadow: 0 0 10px 2px;
-    color: royalblue;
+#hero-img {
+    box-shadow: 0 0 80px 5px;
+    color:rgb(8,45,175);
+    border-radius: 25px;
 }
+
+#hero-img {
+    
+}
+
+.bg-img { 
+    background-image: url(popcorn.jpg);
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    color: white;
+    }

@@ -3,68 +3,72 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <!-- added shrink-to-fit=no, not sure if thats bootstrap or not -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bulma CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- CSS Sheet -->
-    <link rel="stylesheet" href="assets/style.css">
+    <head>
 
-    <title>Date Night</title>
+        <meta charset="UTF-8">
+        <!-- added shrink-to-fit=no, not sure if thats bootstrap or not -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bulma CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
+        <!-- Font Awesome script -->
+        <script src="https://kit.fontawesome.com/5d2e3c0b75.js" crossorigin="anonymous"></script>
+        <!-- CSS Sheet -->
+        <link rel="stylesheet" href="assets/style.css">
 
-</head>
+        <title>Date Night</title>
+
+    </head>
 
 <body>
+    <main class="container">
 
-    <div class="container">
-
-        <!--The HMTL here is simply getting the bare bones elements onto the page. Phase 1-->
-
-        <!-- Jumbotron -->
-        <!-- <div class="jumbotron">
-            <h1>Date Night</h1>
-            <p>This is some filler text about our application weeeee</p>
-        </div> -->
-        <section class="hero is-danger">
+        <header class="hero has-background-danger-dark has-text-white">
             <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">
-                        Primary title
-                    </h1>
-                    <h2 class="subtitle">
-                        Primary subtitle
+                <div class="container has-text-centered">
+                    <figure class="media-left">
+                        <p class="image is-3by1">
+                            <img src="assets/datenight.jpeg">
+                        </p>
+                    </figure>
+                    <h2 class="subtitle has-text-white">Stuck at home? Find a new movie and try a new recipe tonight!
                     </h2>
                 </div>
             </div>
-        </section>
+        </header>
 
+        <br>
+        <br>
         <!-- Input forms -->
 
-        <!-- replaced "row" with "columns" -->
-        <div class="columns">
-            <!-- replaced "col-med-4" with "column is-half" -->
-            <div class="column is-half">
-                <div class="card">
-                    <div class=“control”>
-                        <div class=“select”>
-                            <select>
-                                <option>Select dropdown</option>
-                                <option>With options</option>
-                            </select>
+
+        <div class="columns has-text-centered">
+
+            <div class="column is-4 is-offset-1">
+                <h3 class="is-size-5">Pick a movie genre!</h3>
+                <div class="box">
+                    <div class="field is-danger">
+                        <div class="control">
+                            <div class="select is-danger is-rounded">
+                                <select>
+                                    <option>Genre</option>
+                                    <option>With options</option>
+                                </select>
+                            </div>
                         </div>
+                      
                     </div>
+                    <button class="button has-background-danger-dark has-text-white is-normal">Find a movie</button>
+                    <button class="button has-background-info has-text-white is-normal">Randomize</button>
                 </div>
             </div>
 
-            <div class="column is-half">
-                <div class="card">
-                    <div class=“field”>
-                        <label class=“label”>Subject</label>
-                        <div class=“control”>
-                            <div class=“select”>
+
+            <div class="column is-4 is-offset-2">
+                <h3 class="is-size-5">Pick a cuisine to cook!</h3>
+                <div class="box">
+                    <div class="field">
+                        <div class="control">
+                            <div class="select is-danger is-rounded">
                                 <select name="cuisines" id="cuisines">
                                     <option value="chinese">chinese</option>
                                     <option value="mexican">mexican</option>
@@ -76,49 +80,63 @@
                             </div>
                         </div>
                     </div>
+                    <button class="button has-background-danger-dark has-text-white is-normal">Find a recipe</button>
+                    <button class="button has-background-info has-text-white is-normal">Randomize</button>
                 </div>
             </div>
-        </div>
 
-        <!-- Submit or randomize buttons -->
-        <div class="columns">
-            <div class="column is-half">
-                <button type="button" class="btn btn-primary">Search for Movie</button>
-            </div>
-            <div class="column is-half">
-                <button type="button" class="btn btn-primary" id="search-btn">Search for Recipe</button>
-            </div>
+
         </div>
+        
 
         <!-- Results cards -->
-        <div class="columns">
-            <div class="column is-half">
+        <div class="columns has-text-centered">
+            <div class="column is-4 is-offset-1">
                 <div class="card">
-                    <p>Movie result printed here</p>
+                    <div class="py-6">
+                    <span style="font-size: 6em; color:rgb(50,152,220);">
+                        <i class="fas fa-ticket-alt"></i>
+                    </span>
+                    </div>
                 </div>
             </div>
 
-            <div class="column is-half" id="recipe-container">
-                <div class="card" id="recipe-div">
-                    <p>Recipe result printed here</p>
+
+            <div class="column is-4 is-offset-2">
+                <div class="card">
+                    <div class="py-6">
+                    <span style="font-size: 6em; color:rgb(50,152,220);">
+                        <i class="fas fa-utensils"></i>
+                    </span>
+                    </div>
+
                 </div>
             </div>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="content has-text-centered">
-                <!-- changed to h3 class -->
-                <h3 class="card-title">Date Night Application Supergroup Studios Inc.</h3>
-                <p class="card-text">If we want card text on footer it would go here</p>
-            </div>
-            <div class="content has-text-centered text-muted">
-                "I'll have what she's having"
-            </div>
+    </main>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Footer -->
+    <!-- switched from a div to footer so it's semantically correct -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <!-- changed to h3 class -->
+            <h3 class="card-title">Date Night Application Supergroup Studios Inc.</h3>
+            <p class="card-text">If we want card text on footer it would go here</p>
+        </div>
+        <div class="content has-text-centered text-muted">
+            "I'll have what she's having"
         </div>
 
+    </footer>
 
-    </div> <!-- Container div close -->
+
+
+
 
     <!-- Jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

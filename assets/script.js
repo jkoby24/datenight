@@ -33,8 +33,11 @@ function getRandomMovie() {
             var movie = response.results[randomResult];
             var movieResult = $("<h2>").text(movie.original_title);
             var moviePoster = $("<img>").attr("src", "http://image.tmdb.org/t/p/w185/" + movie.poster_path);
+            var movieLinkUrl = "https://www.themoviedb.org/search?query=" + movieResult.text();
             $("#movie-result").append(movieResult);
             $("#movie-result").append(moviePoster);
+            $("#movie-result").append($("<a>").text("Click this link to get information on this movie").attr("href", movieLinkUrl));
+
      });
 }
 // Run the random movie function when the find-movie button is clicked
@@ -111,10 +114,11 @@ function getMovieByGenre () {
             else {
                 var movieTitle = filterArr[0].original_title;
                 var movieImg = $("<img>").attr("src", "http://image.tmdb.org/t/p/w185/" + filterArr[0].poster_path);
+                var movieLink = "https://www.themoviedb.org/search?query=" + movieTitle;
                 $(".genre-choice").append(movieTitle);
                 $(".genre-choice").append(movieImg);
+                $("#movie-result").append($("<a>").text("Click this link to get information on this movie").attr("href", movieLink));
             }
-
 
         });
 

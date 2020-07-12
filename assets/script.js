@@ -2,7 +2,7 @@
 function getRandomMovie() {
     // Get a random page from the API search
     let minPage = 1;
-    let maxPage = 5;
+    let maxPage = 250;
     minPage = Math.ceil(minPage);
     maxPage = Math.floor(maxPage);
     let randomPage = Math.floor(Math.random() * (maxPage - minPage + 1)) + minPage;
@@ -15,9 +15,8 @@ function getRandomMovie() {
 
     let randomResult = Math.floor(Math.random() * (maxResult - minResult + 1)) + minResult;
     // Filter function for user inputs
-    
+
     // Ajax call for movie API
-    $("#find-movie").on("click", function(event) {
         event.preventDefault();
         $("#movie-result").empty();
 
@@ -36,11 +35,10 @@ function getRandomMovie() {
             var moviePoster = $("<img>").attr("src", "http://image.tmdb.org/t/p/w185/" + movie.poster_path);
             $("#movie-result").append(movieResult);
             $("#movie-result").append(moviePoster);
-        })
-    });
+     });
 }
 // Run the random movie function when the find-movie button is clicked
-$("#find-movie").on("click", getRandomMovie());
+$("#find-movie").on("click", getRandomMovie);
 
 // Genres are originally set to id integers - Create a function to change each id integer to its associated string
 function movieIdToGenre () {

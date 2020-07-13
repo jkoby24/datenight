@@ -1,4 +1,16 @@
-/* test to make sure style.css linked to html */
-p {
-    color: blue;
-} 
+
+
+
+/* adds shadow and glow to pic in header */
+header, img {
+    box-shadow: 0 0 10px 2px;
+    color: royalblue;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 20px;
+  color: white;
+  }
+

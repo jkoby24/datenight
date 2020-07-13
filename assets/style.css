@@ -4,12 +4,24 @@
     border-radius: 25px;
 }
 
-#hero-img {
-    
+.stuck-text {
+    text-shadow: 
+    0px 1px 25px rgb(194,1,21),
+    0px -1px 25px rgb(194,1,21),
+    1px 0px 25px rgb(194,1,21),
+    -1px 0px 25px rgb(194,1,21); 
+}
+
+.find-text {
+    text-shadow: 
+    0px 1px 25px rgb(8,45,175),
+    0px -1px 25px rgb(8,45,175),
+    1px 0px 25px rgb(8,45,175),
+    -1px 0px 25px rgb(8,45,175);
 }
 
 .bg-img { 
-    background-image: url(popcorn.jpg);
+    background-image: url(images/popcorn.jpg);
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;

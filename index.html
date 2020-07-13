@@ -10,158 +10,158 @@
     <script src="https://kit.fontawesome.com/5d2e3c0b75.js" crossorigin="anonymous"></script>
     <!-- CSS Sheet -->
     <link rel="stylesheet" href="assets/style.css">
-
+    <!-- Title of page -->
     <title>Date Night</title>
-
 </head>
 
-<body>
-    <!--Background image-->
-    <div class="bg-img">
+<!-- moved class bg-img to body and noted out div -->
 
-        <header class="hero has-background-black has-text-white">
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <figure class="media-left">
-                        <p class="image is-3by1">
-                            <img src="assets/images/datenight.jpeg" id="hero-img" alt="Date Night neon sign">
-                        </p>
-                    </figure>
-                    <h1 class="stuck-text pt-6 title is-1 has-text-white">Stuck at home?</h1>
-                    <h1 class="find-text subtitle is-2 has-text-white">Find a new movie and try a new recipe tonight!
-                    </h1>
-                </div>
+<body class="bg-img">
+    <!--Div for ackground image-->
+    <!-- <div class="bg-img"> -->
+    <header class="hero has-background-black has-text-white">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <figure class="media-left">
+                    <p class="image is-3by1">
+                        <img src="assets/images/datenight.jpeg" id="hero-img" alt="Date Night neon sign">
+                    </p>
+                </figure>
+                <h1 class="stuck-text pt-6 title is-1 has-text-white">Stuck at home?</h1>
+                <h1 class="find-text subtitle is-2 has-text-white">Find a new movie and try a new recipe tonight!
+                </h1>
             </div>
-        </header>
+        </div>
+    </header>
+    <br>
+    <br>
 
-        <br>
-        <br>
-        <!-- Input forms -->
+    <!-- main container, has input forms for picking a movie and a recipe -->
+    <main class="container">
 
-        <main class="container">
-
-            <div class="columns has-text-centered">
-
-                <div class="column is-4 is-offset-1">
-                    <div class="box">
-                        <h2 class="is-size-3 pb-2 has-text-weight-bold has-text-black">Pick a genre</h2>
-                        <div class="field is-danger">
-                            <div class="control">
-                                <div class="select is-danger is-rounded">
-                                    <select class="genre-select">
-                                        <option>Genre</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                        </div>
-                        <button id="movie-genre" class="button has-background-danger-dark has-text-white is-normal">Find
-                            a movie</button>
-                        <button id="find-movie"
-                            class="button has-background-link-dark has-text-white is-normal">Randomize</button>
-                    </div>
-                </div>
-
-                <div class="column is-4 is-offset-2">
-                    <div class="box">
-                        <h2 class="is-size-3 pb-2 has-text-weight-bold has-text-black">Pick a cuisine</h2>
-                        <div class="field">
-                            <div class="control">
-                                <div class="select is-danger is-rounded">
-                                    <select name="cuisines" id="cuisines" class="has-text-">
-                                        <option>Cuisine</option>
-                                        <option value="chinese">Chinese</option>
-                                        <option value="mexican">Mexican</option>
-                                        <option value="italian">Italian</option>
-                                        <option value="japanese">Japanese</option>
-                                        <option value="indian">Indian</option>
-                                    </select>
-                                </div>
+        <section class="columns has-text-centered">
+            <!-- movie section -->
+            <section class="column is-4 is-offset-1">
+                <div class="box">
+                    <h2 class="is-size-3 pb-2 has-text-weight-bold has-text-black">Pick a genre</h2>
+                    <div class="field is-danger">
+                        <div class="control">
+                            <div class="select is-danger is-rounded">
+                                <select class="genre-select">
+                                    <option>Genre</option>
+                                </select>
                             </div>
                         </div>
-                        <button id="recipe-search-btn"
-                            class="button has-background-danger-dark has-text-white is-normal">Find a recipe</button>
-                        <button id="random-search-btn"
-                            class="button has-background-link-dark has-text-white is-normal">Randomize</button>
                     </div>
+                    <!-- buttons to select movie by genre or random movie-->
+                    <button id="movie-genre" class="button has-background-danger-dark has-text-white is-normal">Find a
+                        movie</button>
+                    <button id="find-movie"
+                        class="button has-background-link-dark has-text-white is-normal">Randomize</button>
                 </div>
+            </section>
 
-            </div>
-
-
-            <!-- Results cards -->
-            <div class="columns has-text-centered">
-                <div class="column is-4 is-offset-1">
-                    <div class="box">
-                        <div class="py-6 genre-choice" id="movie-result">
-                            <span style="font-size: 6em; color:rgb(33,96,196);">
-                                <i class="fas fa-ticket-alt"></i>
-                            </span>
+            <!-- recipe section -->
+            <section class="column is-4 is-offset-2">
+                <div class="box">
+                    <h2 class="is-size-3 pb-2 has-text-weight-bold has-text-black">Pick a cuisine</h2>
+                    <div class="field">
+                        <div class="control">
+                            <div class="select is-danger is-rounded">
+                                <select name="cuisines" id="cuisines" class="has-text-">
+                                    <option>Cuisine</option>
+                                    <option value="chinese">Chinese</option>
+                                    <option value="mexican">Mexican</option>
+                                    <option value="italian">Italian</option>
+                                    <option value="japanese">Japanese</option>
+                                    <option value="indian">Indian</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
+                    <!-- buttons to select recipe or random recipe -->
+                    <button id="recipe-search-btn"
+                        class="button has-background-danger-dark has-text-white is-normal">Find a recipe</button>
+                    <button id="random-search-btn"
+                        class="button has-background-link-dark has-text-white is-normal">Randomize</button>
                 </div>
+            </section>
 
-                <div class="column is-4 is-offset-2">
-                    <div class="box">
-                        <div class="py-6" id="recipe-result">
-                            <span style="font-size: 6em; color:rgb(33,96,196);">
-                                <i class="fas fa-utensils"></i>
-                            </span>
-                        </div>
+        </section>
+
+
+        <!-- movie results listed here -->
+        <section class="columns has-text-centered">
+            <div class="column is-4 is-offset-1">
+                <div class="box">
+                    <div class="py-6 genre-choice" id="movie-result">
+                        <span style="font-size: 6em; color:rgb(33,96,196);">
+                            <i class="fas fa-ticket-alt"></i>
+                        </span>
                     </div>
                 </div>
             </div>
-
-        </main>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <!-- Footer -->
-        <!-- switched from a div to footer so it's semantically correct -->
-        <footer class="footer has-text-black has-background-black">
-            <div class="content has-text-centered">
-                <!-- changed to h3 class -->
-                <h3 class="find-text has-text-white card-title">Date Night Application Supergroup Studios Inc.</h3>
-            </div>
-            <div class="stuck-text has-text-white content has-text-centered text-muted">
-                "I'll have what she's having."
-            </div>
-
-            <br>
-            <br>
-
-            <div class="columns is-multiline content has-text-centered">
-                <div class="column is-2 is-offset-3">
-                    <a href="https://bulma.io">
-                        <img src="assets/images/bulma.png" alt="Made with Bulma" width="128" height="24">
-                    </a>
+            <!-- recipe results listed here -->
+            <div class="column is-4 is-offset-2">
+                <div class="box">
+                    <div class="py-6" id="recipe-result">
+                        <span style="font-size: 6em; color:rgb(33,96,196);">
+                            <i class="fas fa-utensils"></i>
+                        </span>
+                    </div>
                 </div>
-                <div class="column is-2">
-                    <a href="https://spoonacular.com/food-api">
-                        <img src=assets/images/chef.png alt="Spoonacular API" width="35" height="35">
-                    </a>
-                    <p class="has-text-white">spoonacular API</p>
-
-                </div>
-                <div class="column is-2">
-                    <a href="https://spoonacular.com/food-api">
-                        <img src=assets/images/themoviedb.svg alt="The Movie DB" width="160" height="35">
-                    </a>
-                </div>
-
             </div>
-        </footer>
+        </section>
 
-    </div>
+    </main>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Footer -->
+    <footer class="footer has-text-black has-background-black">
+        <div class="content has-text-centered">
+            <!-- changed to h3 class -->
+            <h3 class="find-text has-text-white card-title">Date Night Application Supergroup Studios Inc.</h3>
+        </div>
+        <div class="stuck-text has-text-white content has-text-centered text-muted">
+            "I'll have what she's having."
+        </div>
+
+        <br>
+        <br>
+        <!-- Bulma CSS icon and link -->
+        <div class="columns is-multiline content has-text-centered">
+            <div class="column is-2 is-offset-3">
+                <a href="https://bulma.io">
+                    <img src="assets/images/bulma.png" alt="Made with Bulma" width="128" height="24">
+                </a>
+            </div>
+            <!-- Spoonacular icon and API link -->
+            <div class="column is-2">
+                <a href="https://spoonacular.com/food-api">
+                    <img src=assets/images/chef.png alt="Spoonacular API" width="35" height="35">
+                </a>
+                <p class="has-text-white">spoonacular API</p>
+            </div>
+            <!-- The Movie DB API link -->
+            <div class="column is-2">
+                <a href="https://developers.themoviedb.org/3/getting-started/introduction">
+                    <img src=assets/images/themoviedb.svg alt="The Movie DB" width="160" height="35">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- </div> -->
 
 
 
-        <!-- Jquery CDN -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- Javascript Sheet -->
-        <script type="text/javascript" src="assets/script.js"></script>
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Javascript Sheet -->
+    <script type="text/javascript" src="assets/script.js"></script>
 
 </body>
 

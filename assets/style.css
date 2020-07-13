@@ -1,9 +1,10 @@
+/* header image */
 #hero-img {
     box-shadow: 0 0 80px 5px;
     color:rgb(8,45,175);
     border-radius: 25px;
 }
-
+/* header and footer text red */
 .stuck-text {
     text-shadow: 
     0px 1px 25px rgb(194,1,21),
@@ -11,7 +12,7 @@
     1px 0px 25px rgb(194,1,21),
     -1px 0px 25px rgb(194,1,21); 
 }
-
+/* header and footer text blue */
 .find-text {
     text-shadow: 
     0px 1px 25px rgb(8,45,175),
@@ -19,7 +20,7 @@
     1px 0px 25px rgb(8,45,175),
     -1px 0px 25px rgb(8,45,175);
 }
-
+/* popcorn background image */
 .bg-img { 
     background-image: url(images/popcorn.jpg);
     background-position: center center;
@@ -27,7 +28,7 @@
     background-attachment: fixed;
     background-size:  cover;
 }
-
+/* styling for footer */
 .footer {
     bottom: 0;
     width: 100%;
